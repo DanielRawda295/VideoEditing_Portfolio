@@ -1,0 +1,8 @@
+.git
+node_modules
+dist
+docs/frames
+docs/contact-sheet-*.jpg
+docs/qa-*.png
+docs/qa-results.json
+docs/resume-review.png

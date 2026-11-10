@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#08090d">
+  <title>Daniel Rawda — Video Editor & Motion Graphics Designer</title>
+  <meta name="description" content="Video editing, motion graphics and visual storytelling by Daniel Rawda. Explore entertainment edits, promotional videos, logo animation and UGC.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Daniel Rawda — Every frame. A feeling.">
+  <meta property="og:description" content="A portfolio of video editing, motion graphics and visual storytelling. Based in Lebanon.">
+  <meta property="og:image" content="assets/images/social-preview.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;600;700&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Daniel Rawda","jobTitle":"Video Editor & Motion Graphics Designer","email":"mailto:danielrawda98@gmail.com","sameAs":["https://www.linkedin.com/in/daniel-rawda-a79b09390"],"homeLocation":{"@type":"Country","name":"Lebanon"},"knowsAbout":["Video editing","Motion graphics","Visual effects","Adobe Premiere Pro","Adobe After Effects"]}</script>
+  <script type="module" src="js/main.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="preloader" aria-hidden="true"><span>DR<span class="cyan">.</span></span><i></i></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"></div><div class="cursor-ring" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="wordmark" href="#home" aria-label="Daniel Rawda home">DANIEL RAWDA<span class="cyan">.</span></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-controls="navigation" aria-expanded="false"><span></span><span></span></button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a><a href="#showreel">Featured</a><a href="#projects">Work</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#experience">Journey</a><a class="nav-contact" href="#contact">Let's talk <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+      <div class="hero-topline"><span><i class="status-dot"></i> VIDEO EDITOR & MOTION DESIGNER</span><span>BASED IN LEBANON · CREATING IN MOTION</span></div>
+      <div class="hero-copy">
+        <p class="eyebrow hero-reveal">THE PORTFOLIO OF DANIEL RAWDA</p>
+        <h1 id="hero-title"><span class="line"><span>EVERY FRAME.</span></span><span class="line"><span>A <em>FEELING.</em></span></span></h1>
+        <div class="hero-bottom-copy hero-reveal"><p>Turning raw footage into<br>stories worth watching.</p><a class="round-link" href="#projects" aria-label="Explore selected work"><span aria-hidden="true">↘</span></a></div>
+        <div class="hero-actions hero-reveal"><a class="button primary magnetic" href="#showreel"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></svg>Watch the featured cut</a><a class="text-link" href="#projects">Explore my work <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-stage" aria-label="Preview of Street Snitch / App promo">
+        <div class="stage-label"><span><i class="record-dot"></i> IN THE FRAME</span><span>01 / 19</span></div>
+        <div class="hero-screen">
+          <img src="assets/thumbnails/promotional.webp" alt="Animated phone mockup from Street Snitch / App promo" width="1080" height="1440" fetchpriority="high">
+          <video id="hero-video" data-src="assets/videos/hero-app-promo.mp4" muted loop playsinline preload="none" poster="assets/thumbnails/promotional.webp" aria-hidden="true" tabindex="-1"></video>
+          <div class="frame-corner top-left"></div><div class="frame-corner bottom-right"></div>
+          <div class="screen-meta"><span>STREET SNITCH / APP PROMO</span><button id="hero-motion-toggle" aria-label="Pause background video" hidden>Ⅱ</button></div>
+        </div>
+        <div class="stage-timeline" aria-hidden="true"><div class="ruler">00:00 <span>00:10</span><span>00:20</span><span>00:30</span></div><div class="mini-track"><i></i><i></i><i></i><i></i><b></b></div><div class="wave-track"></div></div>
+        <div class="floating-note"><span class="cyan">✳</span><span>EDIT. REFINE.<br>MAKE IT FEEL.</span></div>
+      </div>
+      <div class="hero-footer"><a href="#showreel"><span class="scroll-mark" aria-hidden="true"></span>SCROLL TO EXPLORE</a><span>STORY FIRST. FRAME BY FRAME.</span><span>PORTFOLIO / <span data-year>2026</span></span></div>
+    </section>
+
+    <div class="discipline-strip" aria-hidden="true"><span>VISUAL STORYTELLING</span><b>✳</b><span>MOTION GRAPHICS</span><b>✳</b><span>VIDEO EDITING</span><b>✳</b><span>VFX & COMPOSITING</span><b>✳</b></div>
+
+    <section id="showreel" class="section featured" aria-labelledby="featured-title">
+      <div class="section-heading reveal"><div><p class="eyebrow"><span>01 / PRESS PLAY</span></p><h2 id="featured-title">STORIES IN <em>MOTION.</em></h2></div><p>A closer look at the cut.<br>One project. Every detail.</p></div>
+      <div class="featured-layout reveal">
+        <div class="featured-player" id="featured-player">
+          <video id="featured-video" playsinline preload="none" poster="assets/thumbnails/promotional.webp" aria-label="Street Snitch / App promo featured promotional video"></video>
+          <button class="featured-play" aria-label="Play Street Snitch / App promo"><span class="play-disc"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 11 7-11 7Z"/></svg></span><span>PLAY FEATURED CUT</span></button>
+          <p class="video-error" hidden>Playback unavailable. <a href="assets/videos/promotional.mp4">Open the video directly</a>.</p>
+        </div>
+        <div class="featured-details"><p class="eyebrow cyan">FEATURED WORK / 001</p><h3>Street Snitch<br>App promo<span class="cyan">.</span></h3><p>An app presentation using animated phone mockups, interface details and typography.</p><dl><div><dt>FORMAT</dt><dd>Promotional video</dd></div><div><dt>RUNTIME</dt><dd>00:33</dd></div><div><dt>FRAME</dt><dd>3:4 · 60 fps</dd></div></dl><div class="tags"><span>Motion graphics</span><span>Product presentation</span></div><a href="#projects" class="text-link">See the full collection <span aria-hidden="true">↗</span></a></div>
+      </div>
+    </section>
+
+    <section id="projects" class="section work" aria-labelledby="work-title">
+      <div class="section-heading reveal"><div><p class="eyebrow">02 / THE COLLECTION</p><h2 id="work-title">SELECTED <em>WORK.</em></h2></div><p>Every frame has a purpose.<br>Find your next favorite cut.</p></div>
+      <div class="work-toolbar reveal"><div class="filters" role="group" aria-label="Filter projects"><button class="filter active" data-filter="All" aria-pressed="true">All work <sup>19</sup></button><button class="filter" data-filter="Entertainment" aria-pressed="false">Entertainment</button><button class="filter" data-filter="Promotional" aria-pressed="false">Promotional</button><button class="filter" data-filter="Fitness" aria-pressed="false">Fitness</button><button class="filter" data-filter="Logo animation" aria-pressed="false">Logo animation</button><button class="filter" data-filter="UGC" aria-pressed="false">UGC</button></div><span id="project-count" role="status" aria-live="polite">19 projects</span></div>
+      <div class="project-grid" id="project-grid"></div>
+      <noscript><p>Enable JavaScript to explore the interactive gallery. You can also <a href="assets/videos/entertainment7.mp4">watch the featured edit directly</a>.</p></noscript>
+      <p class="collection-note">Entertainment edits, animation studies and promotional content. Project titles describe the supplied work.</p>
+    </section>
+
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="portrait-wrap reveal"><div class="portrait-label"><span>THE PERSON BEHIND THE TIMELINE</span><span>DR / 01</span></div><img src="assets/images/daniel-portrait.webp" width="1000" height="1204" alt="Daniel Rawda wearing a dark suit and red tie" loading="lazy"><span class="portrait-caption">DANIEL RAWDA <i class="status-dot"></i> LEBANON</span><div class="portrait-cross" aria-hidden="true">+</div></div>
+      <div class="about-copy reveal"><p class="eyebrow">03 / A LITTLE ABOUT ME</p><h2 id="about-title">BEHIND<br>THE <em>EDIT.</em></h2><p class="about-lead">I'm Daniel. An editor with a technical mind and a love for visual storytelling.</p><p>I’m a video editor and motion graphics designer based in Lebanon, with over four years of experience creating short-form and cinematic content. My work brings together kinetic typography, 3D transitions, VFX and a considered sense of pace.</p><p>With a BSc in Computer Science from the University of Balamand, I also bring scripting and generative AI into my workflow, building tools that make more room for the creative work.</p><div class="about-facts"><div><strong>04+</strong><span>Years of experience</span></div><div><strong>19</strong><span>Edits in this collection</span></div><div><strong>AR / EN</strong><span>Arabic & English</span></div></div><a class="button outline magnetic" href="assets/documents/daniel-rawda-resume.pdf" download>Download my CV <span aria-hidden="true">↓</span></a></div>
+    </section>
+
+    <section id="skills" class="section toolkit" aria-labelledby="skills-title">
+      <div class="section-heading reveal"><div><p class="eyebrow">04 / TOOLS OF THE TRADE</p><h2 id="skills-title">THE CREATIVE <em>TOOLKIT.</em></h2></div><p>Creative instincts.<br>Technical precision.</p></div>
+      <div class="toolkit-layout"><div class="toolkit-main reveal"><div class="software-row"><span class="software-icon pr" aria-hidden="true">Pr</span><div><h3>Premiere Pro</h3><p>The story, the rhythm, the final cut.</p></div><span class="software-kind">EDIT</span></div><div class="software-row"><span class="software-icon ae" aria-hidden="true">Ae</span><div><h3>After Effects</h3><p>Motion, compositing and visual effects.</p></div><span class="software-kind">ANIMATE</span></div><div class="software-row"><span class="software-icon ps" aria-hidden="true">Ps</span><div><h3>Photoshop</h3><p>Visual assets and supporting graphics.</p></div><span class="software-kind">DESIGN</span></div><div class="software-row"><span class="software-icon cc" aria-hidden="true">C</span><div><h3>CapCut</h3><p>Platform-ready short-form content.</p></div><span class="software-kind">REFINE</span></div></div>
+      <div class="timeline-panel reveal"><div class="panel-heading"><span><i class="status-dot"></i> THE EDITING ROOM</span><span>SEQUENCE 01</span></div><div class="editor-ruler" aria-hidden="true"><span>00:00</span><span>00:05</span><span>00:10</span><span>00:15</span></div><div class="editor-tracks" aria-hidden="true"><div class="editor-playhead"></div><div class="editor-track"><span>V3</span><b class="clip pink">MOTION / TYPE</b><b class="clip pink small"></b></div><div class="editor-track"><span>V2</span><b class="clip purple small"></b><b class="clip purple">COMPOSITE</b></div><div class="editor-track"><span>V1</span><b class="clip blue">THE STORY</b><b class="clip blue small"></b></div><div class="editor-track"><span>A1</span><b class="clip audio">∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿∿</b></div></div><p>Good tools. Better stories.</p><span class="eyebrow">STRUCTURE → RHYTHM → FINISH</span></div></div>
+      <div class="capability-grid"><article class="capability reveal"><span class="cyan">01 /</span><h3>Editing & finish</h3><p>Visual storytelling, pacing & retiming, color grading, audio-video synchronization.</p></article><article class="capability reveal"><span class="cyan">02 /</span><h3>Motion & VFX</h3><p>Logo animation, kinetic typography, particle effects, compositing, 3D camera tracking & animation.</p></article><article class="capability reveal"><span class="cyan">03 /</span><h3>AI & automation</h3><p>AI avatars, lip-sync rendering, custom scripting and automated asset pipelines.</p><p class="tool-list">ElevenLabs · HeyGen · Adobe Firefly · Seedance · Google Omni Flash</p></article></div>
+    </section>
+
+    <section id="experience" class="section journey" aria-labelledby="journey-title"><div class="journey-intro reveal"><p class="eyebrow">05 / EXPERIENCE</p><h2 id="journey-title">MY<br><em>JOURNEY.</em></h2><p>Creative work, backed by a technical foundation.</p></div><div class="experience-timeline"><article class="experience-card reveal"><div class="experience-date"><i></i> OCT 2022 — PRESENT</div><p class="eyebrow cyan">FREELANCE / SELF-EMPLOYED · LEBANON</p><h3>Technical Video Editor<br>& Digital Content Creator</h3><p>Creating 3D logo reveals, kinetic typography, particle-driven motion graphics and VFX for fitness, promotional and entertainment content.</p><p>Developing AI avatar content pipelines and custom camera-angle scripts, with final edits and color grading in Premiere Pro and CapCut.</p><div class="tags"><span>Motion design</span><span>VFX</span><span>AI workflows</span></div></article><article class="experience-card reveal"><div class="experience-date"><i></i> JUN 2022 — AUG 2022</div><p class="eyebrow cyan">CIS COLLEGE · KHALDE, LEBANON</p><h3>Video Editing<br>& Graphic Design Intern</h3><p>Edited projects in Premiere Pro and After Effects, refined visual flow and audio-video synchronization, and designed lower thirds and promotional graphics in Photoshop.</p><p>Collaborated on creative briefs and delivered finalized assets in a fast-paced on-site environment.</p></article></div></section>
+
+    <section class="section education" aria-labelledby="education-title"><div class="education-heading reveal"><p class="eyebrow">06 / ALWAYS LEARNING</p><h2 id="education-title">A STRONG <em>FOUNDATION.</em></h2></div><div class="education-layout"><article class="degree-card reveal"><span class="education-symbol" aria-hidden="true">↗</span><p class="eyebrow cyan">UNIVERSITY OF BALAMAND</p><h3>BSc in<br>Computer Science</h3><p>Graduated June 2026</p><span class="degree-line"></span><p>Engineering thinking.<br>Creative application.</p></article><div class="training reveal"><h3>Training & certifications</h3><details open><summary>Video editing & visual effects <span>06</span></summary><ul><li>Video Editing Training — CIS College</li><li>Master After Effects — EDUCBA</li><li>Master Advanced Video Editing with Adobe Premiere Pro — EDUCBA</li><li>The Art of Storytelling: Editing in Adobe Premiere Pro — EDUCBA</li><li>VFX with Adobe After Effects from Novice to Expert — EDUCBA</li><li>Master Keying Techniques in After Effects — EDUCBA</li></ul></details><details><summary>AI & emerging workflows <span>04</span></summary><ul><li>Google AI Essentials — Google</li><li>Claude 101 — Anthropic</li><li>Introduction to Agent Skills — Anthropic</li><li>AI Fluency: Framework & Foundations — Anthropic</li></ul></details></div></div></section>
+
+    <section id="process" class="section process" aria-labelledby="process-title"><div class="section-heading reveal"><div><p class="eyebrow">07 / THE CREATIVE PROCESS</p><h2 id="process-title">FROM RAW FOOTAGE<br>TO <em>FINAL FRAME.</em></h2></div><p>A simple creative framework.<br>A purposeful finish.</p></div><div class="process-track reveal"><div class="process-line" aria-hidden="true"><i></i></div><article><span class="step">01</span><span class="process-icon" aria-hidden="true">⌕</span><h3>Discover</h3><p>Understand the story and the creative objective.</p><span class="timecode">00:00:00</span></article><article><span class="step">02</span><span class="process-icon" aria-hidden="true">▥</span><h3>Assemble</h3><p>Build the structure, pacing and rhythm.</p><span class="timecode">00:00:10</span></article><article><span class="step">03</span><span class="process-icon" aria-hidden="true">◇</span><h3>Refine</h3><p>Shape the motion, transitions, color and sound.</p><span class="timecode">00:00:20</span></article><article><span class="step">04</span><span class="process-icon" aria-hidden="true">↗</span><h3>Deliver</h3><p>Export polished content for the intended platform.</p><span class="timecode">00:00:30</span></article></div></section>
+
+    <section id="contact" class="section contact" aria-labelledby="contact-title"><div class="contact-glow" aria-hidden="true"></div><div class="contact-top reveal"><p class="eyebrow"><i class="status-dot"></i> YOUR NEXT STORY STARTS HERE</p><span>08 / GET IN TOUCH</span></div><h2 class="reveal" id="contact-title">LET'S CREATE<br>SOMETHING<br><em>WORTH WATCHING.</em></h2><div class="contact-bottom reveal"><div><p>Have a project in mind?<br>Let's bring your vision to life.</p><a class="email-link" href="mailto:danielrawda98@gmail.com">danielrawda98@gmail.com <span aria-hidden="true">↗</span></a></div><a class="contact-circle magnetic" href="mailto:danielrawda98@gmail.com"><span aria-hidden="true">↗</span>LET'S WORK TOGETHER</a></div><div class="contact-links reveal"><span>BASED IN LEBANON</span><a href="tel:+96179149862">+961 79 149 862</a><a href="https://www.linkedin.com/in/daniel-rawda-a79b09390" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="assets/documents/daniel-rawda-resume.pdf" download>Download CV ↓</a></div></section>
+  </main>
+  <footer class="site-footer"><div><a class="wordmark" href="#home">DANIEL RAWDA<span class="cyan">.</span></a><p>Video editor & visual storyteller.</p></div><span>© <span data-year>2026</span> Daniel Rawda</span><a class="back-top" href="#home">BACK TO TOP <span aria-hidden="true">↑</span></a></footer>
+  <dialog id="project-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><p id="dialog-category" class="eyebrow cyan"></p><button class="dialog-close" aria-label="Close project">✕</button></div><div class="dialog-video-wrap"><video id="dialog-video" controls playsinline preload="none"></video><p id="dialog-error" hidden>Playback unavailable. <a id="dialog-direct" href="#">Open the video directly</a>.</p></div><div class="dialog-content"><div><h2 id="dialog-title"></h2><p id="dialog-description"></p><div class="tags" id="dialog-tags"></div></div><div class="dialog-paging"><button id="previous-project" aria-label="Previous project">←</button><span id="dialog-index"></span><button id="next-project" aria-label="Next project">→</button></div></div></dialog>
+</body>
+</html>

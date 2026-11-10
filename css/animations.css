@@ -1,0 +1,272 @@
+.preloader {
+  position:fixed;
+  inset:0;
+  z-index:150;
+  background:var(--bg);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  gap:20px;
+  pointer-events:none;
+  animation:loader-fallback .3s 3s forwards
+}
+
+.preloader>span {
+  font:800 55px var(--display);
+  letter-spacing:-.08em
+}
+
+.preloader i {
+  width:90px;
+  height:1px;
+  background:linear-gradient(90deg,var(--indigo),var(--cyan));
+  transform-origin:left;
+  animation:load-line .9s ease-out both
+}
+
+.preloader.dismissed {
+  opacity:0;
+  visibility:hidden;
+  transition:opacity .4s,visibility .4s
+}
+
+.cursor,.cursor-ring {
+  display:none;
+  pointer-events:none;
+  position:fixed;
+  left:0;
+  top:0;
+  z-index:100;
+  border-radius:50%;
+  translate:-50% -50%;
+  opacity:0
+}
+
+.cursor {
+  width:4px;
+  height:4px;
+  background:var(--cyan);
+  box-shadow:0 0 12px #00e5ff66
+}
+
+.cursor-ring {
+  width:28px;
+  height:28px;
+  border:1px solid #00e5ff66;
+  transition:width .2s,height .2s,background .2s
+}
+
+.cursor-ring.interactive {
+  width:45px;
+  height:45px;
+  background:#00e5ff0a
+}
+
+.hero h1 .line>span {
+  display:block;
+  animation:mask-reveal 1s cubic-bezier(.2,.7,.2,1) both
+}
+
+.hero h1 .line:nth-child(2)>span {
+  animation-delay:.12s
+}
+
+.hero-reveal {
+  animation:rise-in .9s .2s ease-out both
+}
+
+.hero-actions {
+  animation-delay:.35s
+}
+
+.site-header {
+  animation:nav-reveal .8s ease-out both
+}
+
+.js-motion .reveal {
+  opacity:0;
+  transform:translateY(27px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)
+}
+
+.js-motion .reveal.visible {
+  opacity:1;
+  transform:none
+}
+
+.project-card.entering {
+  animation:rise-in .5s both;
+  animation-delay:var(--delay,0ms)
+}
+
+.contact-circle::before {
+  content:"";
+  position:absolute;
+  inset:-7px;
+  border:1px solid #00e5ff18;
+  border-radius:50%;
+  transition:transform .4s,opacity .4s
+}
+
+.contact-circle:hover::before {
+  transform:scale(1.1);
+  opacity:0
+}
+
+.timeline-panel:hover .editor-playhead {
+  animation:edit-playhead 5s linear infinite
+}
+
+.scroll-mark::before {
+  animation:scroll-hint 2s infinite
+}
+
+.floating-note>.cyan {
+  animation:slow-rotate 28s linear infinite
+}
+
+.hero h1 em {
+  background:linear-gradient(110deg,transparent 35%,#00e5ff13 48%,transparent 60%);
+  background-size:250% 100%;
+  background-clip:text;
+  -webkit-background-clip:text;
+  animation:text-light 9s ease-in-out infinite
+}
+
+.portrait-wrap::before {
+  transition:border-color .5s,transform .5s
+}
+
+.portrait-wrap:hover::before {
+  border-color:#00e5ff99;
+  transform:translate(3px,-3px)
+}
+
+@media(pointer:fine) and (prefers-reduced-motion:no-preference) {
+  .cursor,.cursor-ring {
+    display:block
+  }
+}
+
+@keyframes mask-reveal {
+  from {
+    transform:translateY(112%)
+  }
+  to {
+    transform:translateY(0)
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity:0;
+    transform:translateY(20px)
+  }
+  to {
+    opacity:1;
+    transform:translateY(0)
+  }
+}
+
+@keyframes nav-reveal {
+  from {
+    opacity:0;
+    transform:translateY(-15px)
+  }
+  to {
+    opacity:1;
+    transform:none
+  }
+}
+
+@keyframes load-line {
+  from {
+    transform:scaleX(0)
+  }
+  to {
+    transform:scaleX(1)
+  }
+}
+
+@keyframes loader-fallback {
+  to {
+    opacity:0;
+    visibility:hidden
+  }
+}
+
+@keyframes scroll-hint {
+  0%,100% {
+    transform:translateY(0);
+    opacity:.4
+  }
+  50% {
+    transform:translateY(6px);
+    opacity:1
+  }
+}
+
+@keyframes slow-rotate {
+  to {
+    transform:rotate(360deg)
+  }
+}
+
+@keyframes text-light {
+  0%,50% {
+    background-position:100% 0
+  }
+  100% {
+    background-position:-100% 0
+  }
+}
+
+@keyframes edit-playhead {
+  0% {
+    left:9%
+  }
+  100% {
+    left:95%
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  html {
+    scroll-behavior:auto
+  }
+  *,*::before,*::after {
+    animation:none!important;
+    transition:none!important
+  }
+  .preloader {
+    display:none
+  }
+  .js-motion .reveal {
+    opacity:1;
+    transform:none
+  }
+  .cursor,.cursor-ring,#particles {
+    display:none!important
+  }
+  .hero-stage {
+    translate:none!important
+  }
+  .magnetic {
+    transform:none!important
+  }
+  .hero h1 .line>span {
+    transform:none
+  }
+}
+
+.experience-timeline::before {
+  transform:scaleY(var(--journey-progress,1));
+  transform-origin:top
+}
+
+@media(prefers-reduced-motion:reduce) {
+  .experience-timeline::before {
+    transform:none
+  }
+}

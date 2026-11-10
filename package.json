@@ -1,0 +1,9 @@
+{
+  "name": "daniel-rawda-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Daniel Rawda's cinematic video editing portfolio. Buildless HTML, CSS and JavaScript.",
+  "scripts": { "dev": "node docs/serve.mjs", "start": "node docs/serve.mjs", "build": "node docs/build.mjs", "check": "node --check js/main.js && node --check js/animations.js && node --check js/video-player.js && node --check js/projects.js" },
+  "engines": { "node": ">=22" }
+}
